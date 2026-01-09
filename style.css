@@ -1,188 +1,106 @@
-/* Global Reset */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
   background: #ffffff;
-  color: #111;
+}
+
+.container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 20px;
 }
 
-/* Container for inputs and content */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.box {
   width: 100%;
-  max-width: 600px;
-  padding: 0 15px;
-  min-height: 100vh; /* vertically center */
-  justify-content: center;
+  max-width: 420px;
 }
 
-/* Heading */
-h1 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  text-align: center;
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
 }
 
 /* Tabs */
 .tabs {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 20px;
 }
 
 .tab {
+  font-size: 1rem;
+  color: #999;
   cursor: pointer;
-  padding-bottom: 6px;
-  color: #888;
-  font-size: 16px;
+  padding-bottom: 5px;
 }
 
 .tab.active {
-  color: #0066ff;
-  border-bottom: 2px solid #0066ff;
-  font-weight: bold;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
 }
 
 /* Inputs */
 input {
   width: 100%;
   padding: 14px;
-  margin: 10px 0;
-  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 15px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   outline: none;
 }
 
-input::placeholder {
-  font-size: 18px;
-  color: #888;
+input:focus {
+  border-bottom: 1px solid #007bff;
 }
 
-/* Button fixed at bottom */
-button {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px;
-  padding: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  background: #e5e7eb;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-button.active {
-  background: #0066ff;
-  color: #fff;
-}
-
-/* Bottom links container (Create Account / Forgot Password) */
-.bottom-links {
-  position: fixed;
-  bottom: 80px; /* slightly above button */
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  font-size: 16px;
-  color: #0066ff;
-}
-
-.bottom-links p {
-  cursor: pointer;
-  margin: 0;
-}
-
-/* Hidden elements (e.g., phone input) */
+/* Hide phone input */
 .hidden {
   display: none;
 }
 
-/* Centered text */
-.center {
-  text-align: center;
+/* Bottom links */
+.bottom-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin: 15px 0 25px;
 }
 
-/* Code input style */
-.code-input {
-  letter-spacing: 10px;
-  text-align: center;
-  font-size: 22px;
+.bottom-links a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Message text */
-.message {
-  font-size: 26px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 100px;
+/* Button */
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Responsive adjustments for mobile */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
+button:hover {
+  background: #0056b3;
+}
 
-  h1 {
-    font-size: 20px;
-  }
-
-  .tabs {
-    gap: 10px;
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.2rem;
   }
 
   .tab {
-    font-size: 14px;
-  }
-
-  input {
-    font-size: 16px;
-    padding: 12px;
-  }
-
-  input::placeholder {
-    font-size: 16px;
-  }
-
-  button {
-    width: 95%;
-    padding: 12px;
-    font-size: 18px;
-  }
-
-  .bottom-links {
-    font-size: 14px;
-    padding: 0 10px;
-    bottom: 70px;
-  }
-
-  .code-input {
-    font-size: 18px;
-    letter-spacing: 6px;
-  }
-
-  .message {
-    font-size: 20px;
-    margin-top: 60px;
+    font-size: 1.1rem;
   }
 }
