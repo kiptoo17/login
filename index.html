@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Olerai – Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box"  >
+  <h2 style="font-size: 50px;">Sign in to CoinCola</h2>
+<div class="tabs">
+      <div class="tab active" onclick="switchTab('email')"style="font-size: 30px;">Email</div>
+      <div class="tab" onclick="switchTab('phone')" style="font-size: 30px;">Phone</div>
+    </div>
+  <input id="emailInput" placeholder="Email address" style="font-size: 25px;"/>
+    <input id="phoneInput" placeholder="Phone number" class="hidden" style="font-size: 25px;"/>
+
+  <input type="password" id="userpass" placeholder="Enter password ">
+  
+<div class="bottom-links">
+  <p class="left">Create Account</p>
+  <p class="right">Forgot Password?</p>
+</div>
+ 
+  <button class="active" onclick="submitUser()">Continue</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
